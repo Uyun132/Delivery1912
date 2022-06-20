@@ -1,17 +1,34 @@
 package com.example.delivery1912.model;
 
 public class User {
-    private String id,namaUs,emailUs, telepon;
+    private String id,namaUs,emailUs,passwordUs, telepon;
 
     public User(){
 
     }
 
-    public User( String namaUs, String nimUs, String telepon) {
+    public User( String namaUs, String emailUs,String passwordUs, String telepon) {
 
         this.namaUs = namaUs;
-        this.emailUs = nimUs;
+        this.emailUs = emailUs;
         this.telepon = telepon;
+        this.passwordUs = passwordUs;
+    }
+
+    public String getEmailUs() {
+        return emailUs;
+    }
+
+    public void setEmailUs(String emailUs) {
+        this.emailUs = emailUs;
+    }
+
+    public String getPasswordUs() {
+        return passwordUs;
+    }
+
+    public void setPasswordUs(String passwordUs) {
+        this.passwordUs = passwordUs;
     }
 
     public String getId() {
@@ -28,14 +45,6 @@ public class User {
 
     public void setNamaUs(String namaUs) {
         this.namaUs = namaUs;
-    }
-
-    public String getNimUs() {
-        return emailUs;
-    }
-
-    public void setNimUs(String nimUs) {
-        this.emailUs = nimUs;
     }
 
     public String getTelepon() {
