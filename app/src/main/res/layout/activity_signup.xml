@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.2" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/hargaMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
@@ -108,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="Email UMY"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintBottom_toTopOf="@+id/hargaMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"

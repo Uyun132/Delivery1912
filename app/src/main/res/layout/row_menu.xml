@@ -4,19 +4,24 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="10dp">
-
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/nameMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:text="Nama"
         />
+
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/hargaMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        />
+        android:text="Harga" />
+    <TextView
+        android:id="@+id/descMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi" />
+
 </LinearLayout>

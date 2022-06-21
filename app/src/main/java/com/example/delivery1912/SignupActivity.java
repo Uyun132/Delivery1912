@@ -41,7 +41,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         nameUs = findViewById(R.id.username);
-        emailUs = findViewById(R.id.email);
+        emailUs = findViewById(R.id.hargaMenu);
         passwordUs = findViewById(R.id.password);
         teleponUs = findViewById(R.id.telepon);
         btnSignup = findViewById(R.id.btSignup);
@@ -89,6 +89,7 @@ public class SignupActivity extends AppCompatActivity {
              }
          });
     }
+
     private void saveData(String name, String email,String password, String telepon) {
         Map<String,Object> user = new HashMap<>();
         user.put("name",name);
