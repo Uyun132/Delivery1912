@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -42,6 +44,19 @@ public class MenuActivity extends AppCompatActivity {
         progressDialog.setMessage("Mengambil data .... ");
 
         menuAdapter = new MenuAdapter(getApplicationContext(),list);
+        menuAdapter.setDialog(new MenuAdapter.Dialog() {
+            @Override
+            public void onClick(int pos) {
+                Intent intent = new Intent(getApplicationContext(), DetailedMenu.class);
+                intent.putExtra("id",list.get(pos).getId());
+                intent.putExtra("name",list.get(pos).getNameMen());
+                intent.putExtra("harga",list.get(pos).getHargaMen());
+                intent.putExtra("desk",list.get(pos).getDescMen());
+                startActivity(intent);
+            }
+        });
+
+
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         RecyclerView.ItemDecoration decoration = new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL);
@@ -55,6 +70,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onStart();
         getData();
     }
+
+
 
     private void getData() {
         progressDialog.show();

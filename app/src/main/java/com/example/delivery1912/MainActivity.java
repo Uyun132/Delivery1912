@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 // Main activity nanti isinya MENU makanan
 public class MainActivity extends AppCompatActivity {
-    private Button signin, signup;
+    private Button signin, signup, manint;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         signin = findViewById(R.id.Signin);
         signup = findViewById(R.id.Signup);
+//        manint = findViewById(R.id.mtc);
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +41,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+//        manint.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), LokasiAntar.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
     }
 }
